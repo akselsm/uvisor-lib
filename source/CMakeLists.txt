@@ -29,6 +29,11 @@ elseif(TARGET_LIKE_STM32F429I_DISCO)
         set(UVISOR_PRESENT true)
         set(UVISOR_DIR "STM32F429xx")           # STM32F429I
     endif()
+elseif(TARGET_LIKE_EFM32GG_STK)
+    if(TARGET_LIKE_GCC)
+        set(UVISOR_PRESENT true)
+        set(UVISOR_DIR "EFM32GG990F1024")       # EFM32GG990F1024
+    endif()
 endif()
 
 # select source files depending on platform (supported/unsupported)
