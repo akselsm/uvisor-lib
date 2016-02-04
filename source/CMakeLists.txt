@@ -34,6 +34,11 @@ elseif(TARGET_LIKE_EFM32GG_STK)
         set(UVISOR_PRESENT true)
         set(UVISOR_DIR "EFM32GG990F1024")       # EFM32GG990F1024
     endif()
+elseif(TARGET_LIKE_EFM32PG_STK)
+    if(TARGET_LIKE_GCC)
+        set(UVISOR_PRESENT true)
+        set(UVISOR_DIR "EFM32PG1B200F256GM48")       # EFM32PG1B200F256GM48
+    endif()
 endif()
 
 # select source files depending on platform (supported/unsupported)
